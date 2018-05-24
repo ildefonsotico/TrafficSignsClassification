@@ -97,6 +97,7 @@ The difference between the original data set and the augmented data set is the f
 The model of the architecture used can be found by the 10 cell in the IPython.
 
 My final model consisted of the following layers:
+
 | Layer         		|     Description	        					|
 |:---------------------:|:---------------------------------------------:|
 | Input         		| 32x32x3 RGB image   							|
