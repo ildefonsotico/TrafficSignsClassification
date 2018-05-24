@@ -50,20 +50,28 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is (32, 32, 3)
+* The number of unique classes/labels in the data set is 43
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. The data shown bellow are chose randomically.It was extract by the dataset used from the german laboratory. 
 
-![alt text][image1]
+![trafficsign_dataexploration](https://user-images.githubusercontent.com/19958282/40462028-84c00470-5ee4-11e8-8e8e-ae252ad946e6.png)
+
+There are a non-homogenous samples for each kind of image. It can cause issue and misunderstanding about how the network can handle with the dataset. Bellow will be shown how each class of images are distributed in the dataset. It will be divided by Training Set, Validation Set and Testing Set.   
+
+![traffic_ytrain_samples](https://user-images.githubusercontent.com/19958282/40462316-cf7491b0-5ee5-11e8-90a1-684b2a293074.png)
+
+![traffic_y_validation](https://user-images.githubusercontent.com/19958282/40462317-d09e3c26-5ee5-11e8-88d6-9b78d82da90e.png)
+
+![traffic_y_validation_samples](https://user-images.githubusercontent.com/19958282/40462318-d1b65b16-5ee5-11e8-93af-ee84f27fa801.png)
 
 ### Design and Test a Model Architecture
 
