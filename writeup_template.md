@@ -33,9 +33,11 @@ The goals / steps of this project are the following:
 1. Submission Files - All files requested was uploaded. The IPython notebook, HTML and a write up report. It will meet the requirements through this criteria. 
 2.This criteria make sense be showed by a visualization approach, so it will be shown bellow in order to reach the requirements. 
 3. Design and Test a Model Architecture
- 3.1.Preprocessing - The preprocessing tecnique used was a very simple one. It just normalize each image by the approach taught for the course. Standardize an image using ``(pixel - 128.) / 128.`` for each of the channels (RGB)
- 3.2. Model Architecture - The architecture used was pretty similar from the LeNet architecture. It was made slighly changes in order to maximize performance and avoid overfitting. The approach used was to add some dropout function using a keep prob of the 0.9. This approach allows increasing from 89% accuracy average to around 96% accuracy. 
- 3.3. 
+3.1.Preprocessing - The preprocessing tecnique used was a very simple one. It just normalize each image by the approach taught for the course. Standardize an image using ``(pixel - 128.) / 128.`` for each of the channels (RGB)
+3.2. Model Architecture - The architecture used was pretty similar from the LeNet architecture. It was made slighly changes in order to maximize performance and avoid overfitting. The approach used was to add some dropout function using a keep prob of the 0.9. This approach allows increasing from 89% accuracy average to around 96% accuracy. 
+3.3. Model Training - The optimiezer tecnique used was AdamOptmizer. It was used by the quiz and it worked pretty well, so it keep in the base architecture. I also did some data augmentation to better generalize the model. I chose 30 Epochs to training the net. The batch size chose was 152. The rate chose was 0.000945. This hyperparameter works better in my approach. I also used the normal size from the LeNet does. 
+3.4. Solution Approach - As said above, the acrchitecture used was pretty similar by the LeNet architecture adding just some dropout function in order to increase accuracy and to prevent overfitting. The accuracy reached either it was around 96% or 95.6% to be exact. 
+4. Test a Model on New Images - I tried to search on google in order to to get real images from the german signs traffic. At begginer I tried to use some images with bad resolution, then they didn't work well. After that, I tried to put some images like speed limits, and sometimes the net was not able to predict it correctly. It is important enphasizing that I didn't pass them from the pre processing function. By the end, and After I preprocessing the images found by the google, the prediction work pretty well. I found in some dataset 80% of accuracy. 
  3.2.Model Architecture - 
 ---
 ### Writeup / README
