@@ -30,7 +30,13 @@ The goals / steps of this project are the following:
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
+1. Submission Files - All files requested was uploaded. The IPython notebook, HTML and a write up report. It will meet the requirements through this criteria. 
+2.This criteria make sense be showed by a visualization approach, so it will be shown bellow in order to reach the requirements. 
+3. Design and Test a Model Architecture
+ 3.1.Preprocessing - The preprocessing tecnique used was a very simple one. It just normalize each image by the approach taught for the course. Standardize an image using ``(pixel - 128.) / 128.`` for each of the channels (RGB)
+ 3.2. Model Architecture - The architecture used was pretty similar from the LeNet architecture. It was made slighly changes in order to maximize performance and avoid overfitting. The approach used was to add some dropout function using a keep prob of the 0.9. This approach allows increasing from 89% accuracy average to around 96% accuracy. 
+ 3.3. 
+ 3.2.Model Architecture - 
 ---
 ### Writeup / README
 
