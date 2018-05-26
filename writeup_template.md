@@ -116,26 +116,29 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+The traning architeture can be found by the 10th section of the IPython. 
+
+To train the model, I used an variation of the LeNet architecture. This architecture used a convolution following with a Dropout and maxpooling with a stride (2x2). It was used dropout in order to allow better avoid overfitting. The next step was used a new Convolution with a stride (1x1) following by the dropout with a RELU activation funtion. Next step was used again a dropout with maxpooling as shown above, following by 3 fully connected layers intercalated by dropout between them. The epochs used was 30 with a batch_size of 128. The rate chose was 0.00995. It works well and provided between 94,5 to 95.8% of the accuracy. I guess the data augmentation a better disturb inserted on the samples could help to improve the accuracy. 
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 0.999
+* validation set accuracy of 0.956 
+* test set accuracy of 0.954
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+I began using the LeNet architecture, but it was not able to provide more than 89% of accuracy.
 * What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+I guess the main problem was the overfitting that architectura was getting. 
+* How was the architecture adjusted and why was it adjusted? 
+As I said before, I guess the mainly problem was the overfitting, so I added some dropout funtion combined by maxpooling or relu activation funtion. It was done to try increasing accuracy and avoid overfitting. 
 * Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+The number of epochs was incresed for 20. The learning rate was chose to be 0.00995. It was added dropout function where was used a Keep_prob by 0.9.
+* What are some of the important design choices and why were they chosen? 
+The convolution was used same LeNet because it is able to classifie better image objects. Dropout was used to prevent overfiting. MaxPooling was used to improve the accuracy and classification. 
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
 ### Test a Model on New Images
