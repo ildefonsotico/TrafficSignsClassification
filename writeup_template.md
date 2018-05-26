@@ -124,8 +124,8 @@ To train the model, I used an variation of the LeNet architecture. This architec
 
 My final model results were:
 * training set accuracy of 0.999
-* validation set accuracy of 0.956 
-* test set accuracy of 0.954
+* validation set accuracy of 0.950 
+* test set accuracy of 0.937
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -147,44 +147,29 @@ The convolution was used same LeNet because it is able to classifie better image
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![0_sign](https://user-images.githubusercontent.com/19958282/40570833-659423b0-6065-11e8-90b4-361ba36008b4.jpg) ![14_sign](https://user-images.githubusercontent.com/19958282/40570836-67b361ce-6065-11e8-8e42-3f1f1f6677a5.jpg) ![17_sign](https://user-images.githubusercontent.com/19958282/40570839-6b15a7dc-6065-11e8-8a0f-1e208d71d0cf.jpg) ![25_sign](https://user-images.githubusercontent.com/19958282/40570840-6d132d16-6065-11e8-8d22-a075538edc2f.jpg)
+![33_sign](https://user-images.githubusercontent.com/19958282/40570841-6f93f2f0-6065-11e8-98b2-f5d52d3520bd.jpg)
 
-The first image might be difficult to classify because ...
-
+The first image might be difficult to classify because it is same than others. I guess the net could identify the relevants objects on the image, but it was not able to identified correcly which speed limit there is inside. 
+The other images the Net classified well. 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| 20Km limit      		| No vehicles   									| 
+| Stop     			| Stop 										|
+| No entry					| No entry											|
+| Road work	      		| Road work					 				|
+| Turn right ahead			| Turn right ahead     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 36th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
+![softmax1](https://user-images.githubusercontent.com/19958282/40571136-d7904210-6069-11e8-8c7f-412ab6fa2e1e.png)
+![softmax2](https://user-images.githubusercontent.com/19958282/40571137-d855cdaa-6069-11e8-835e-d7c686273a4e.png)
